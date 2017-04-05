@@ -22,6 +22,8 @@ if(array_key_exists($_SERVER['HTTP_HOST'],$sistem_web)){
 	$route['default_controller']  							= $api_sistem[$_SERVER['HTTP_HOST']];
 	$route['getkota'] 										= "api/kota/get_list";
 	$route['getkota/(:any)'] 								= "api/kota/get_id/$1";
+	$route['getcabang'] 								    = "api/cabang/get_list";
+	$route['getcabang/(:any)'] 								= "api/cabang/get_id/$1";
 
 }else{
 
