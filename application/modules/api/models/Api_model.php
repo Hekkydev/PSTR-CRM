@@ -26,6 +26,20 @@ class Api_model extends CI_Model
     }
 
 
+    // GET DATA cabang //
+    function find_cabang()
+    {
+               $this->db_sistem->where('deleted_date',NULL);
+        return $this->db_sistem->get('p_cabang')->result_object();    
+    }
+
+     function find_cabang_by_uuid($uuid)
+    {
+                $where = array('uuid_cabang'=>$uuid);
+        return $this->db_sistem->get_where('p_cabang',$where);
+    }
+
+
     
     
 
