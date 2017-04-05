@@ -17,7 +17,8 @@ $db['default']['cachedir'] = "";
 $db['default']['char_set'] = "utf8";
 $db['default']['dbcollat'] = "utf8_general_ci";
 
-
+$active_group = "default";
+$active_record = TRUE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
@@ -42,5 +43,4 @@ $db['shuttle']['dbcollat'] = "utf8_general_ci";
 
 
 // -------------------------------------------------------------
-$active_group = "default";
 $active_record = TRUE;
