@@ -20,6 +20,9 @@ if(array_key_exists($_SERVER['HTTP_HOST'],$sistem_web)){
 
 }elseif(array_key_exists($_SERVER['HTTP_HOST'],$api_sistem)){
 	$route['default_controller']  							= $api_sistem[$_SERVER['HTTP_HOST']];
+	$route['getkota'] 										= "api/kota/get_list";
+	$route['getkota/(:any)'] 								= "api/kota/get_id/$1";
+
 }else{
 
 	$route['default_controller'] = 'welcome';
