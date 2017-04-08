@@ -19,11 +19,11 @@ if(array_key_exists($_SERVER['HTTP_HOST'],$sistem_web)){
 	$route['auth/activate/(:num)/(:any)'] 						= 'users/activate/$1/$2';
 
 }elseif(array_key_exists($_SERVER['HTTP_HOST'],$api_sistem)){
-	$route['default_controller']  							= $api_sistem[$_SERVER['HTTP_HOST']];
-	$route['getkota'] 										= "api/kota/get_list";
-	$route['getkota/(:any)'] 								= "api/kota/get_id/$1";
-	$route['getcabang'] 								    = "api/cabang/get_list";
-	$route['getcabang/(:any)'] 								= "api/cabang/get_id/$1";
+	$route['default_controller']  										= $api_sistem[$_SERVER['HTTP_HOST']];
+	$route['getkota'] 																= "api/kota/get_list";
+	$route['getkota/(:any)'] 													= "api/kota/get_id/$1";
+	$route['getcabang'] 								    					= "api/cabang/get_list";
+	$route['getcabang/(:any)'] 												= "api/cabang/get_id/$1";
 
 }else{
 
@@ -32,7 +32,7 @@ if(array_key_exists($_SERVER['HTTP_HOST'],$sistem_web)){
 	$route['translate_uri_dashes'] = FALSE;
 
 	$route['home'] = 'welcome';
-	
+
 
 
 	$route['read/(:any)'] = 'posts/read/$1';
