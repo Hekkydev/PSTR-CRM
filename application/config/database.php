@@ -4,7 +4,7 @@
 // The following values will probably need to be changed.
 $db['default']['username'] = "root";
 $db['default']['password'] = "";
-$db['default']['database'] = "ciblog";
+$db['default']['database'] = "shuttle_blog";
 
 // The following values can probably stay the same.
 $db['default']['hostname'] = "localhost";
