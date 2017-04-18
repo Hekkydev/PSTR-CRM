@@ -23,8 +23,12 @@
              if(in_array($_SERVER['REMOTE_ADDR'],$ip_maintenance,TRUE)){
                
              }else{
-               $this->show_site_offline();
-               exit;
+               if($_SERVER['HTTP_HOST'] == $config['api_site']){
+
+               }else{  
+                  $this->show_site_offline();
+                  exit;
+               }
              }
 
 

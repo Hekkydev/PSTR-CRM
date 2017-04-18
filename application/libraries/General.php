@@ -57,7 +57,7 @@ class General {
         return $pangkas;
 
     }
-   
+
     function getCategories() {
         $this->CI->load->model('Category');
         $categories = $this->CI->Category->find_active();
@@ -108,7 +108,7 @@ class General {
         }
     }
 
-    
+
     function isExistNextMenu($position) {
         $this->CI->load->model('Menu');
         $slide = $this->CI->Menu->getNextMenu($position);
@@ -129,7 +129,7 @@ class General {
         }
     }
 
-    
+
 
     function getSettingByKey($key) {
         $this->CI->load->model('Setting');
@@ -167,7 +167,7 @@ class General {
 
 
     function multilevel_select($array,$parent_id = 0,$parents = array(),$selected = null) {
-        
+
         static $i=0;
         if($parent_id==0)
         {
@@ -204,7 +204,7 @@ class General {
 
     function bootstrap_menu($array,$parent_id = 0,$parents = array())
     {
-        $uri = 'home';
+        $uri = '';
         if($parent_id==0)
         {
             foreach ($array as $element) {
@@ -217,22 +217,22 @@ class General {
         foreach($array as $element)
         {
 
-        
+
             if($element['parent_id']==$parent_id)
             {
                 if(in_array($element['id'],$parents))
                 {
-                   
+
                     $menu_html .= '<li class="sp-menu-item current-item  sp-has-child ">';
                     $menu_html .= '<a href="'.site_url($element['url']).'" >'.$element['name'].' </a>';
 
                 }else {
-                    
+
                      if($uri == $element['url']){
                          $menu_html .= '<li class="sp-menu-item active">';
                      }else{
                          $menu_html .= '<li class="sp-menu-item">';
-                         
+
                      }
                          $menu_html .= '<a href="' . site_url($element['url']) . '">' . $element['name'] . '</a>';
                 }
@@ -290,7 +290,7 @@ class General {
         }
         return $menu_html;
     }
-   
+
 }
 
 ?>

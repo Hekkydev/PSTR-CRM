@@ -24,6 +24,7 @@ $config['index_page'] = '';
 */
 $config['is_offline'] = TRUE;
 $config['ip_maintenance'] = array('127.0.0.1');
+$config['api_site'] = 'api.pasteurtrans.co.org';
 
 
 /*

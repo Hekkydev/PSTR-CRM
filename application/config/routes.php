@@ -27,7 +27,7 @@ if(array_key_exists($_SERVER['HTTP_HOST'],$sistem_web)){
 
 }else{
 
-	$route['default_controller'] = 'welcome';
+	$route['default_controller'] = 'booking';
 	$route['404_override'] = '';
 	$route['translate_uri_dashes'] = FALSE;
 
